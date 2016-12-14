@@ -1,0 +1,162 @@
+html {
+	font: 14px "Microsoft Yahei", Arial, Helvetica, sans-serif;
+}
+
+body {
+	border: 1px #c55 solid;
+	width: 800px;
+}
+
+.container {
+	overflow: hidden;
+	width: 800px;
+	height: 1200px;
+}
+
+#left {
+	float: left;
+	background: #c55;
+	width: 260px;
+	height: 1200px;
+	color: #fff;
+}
+
+#right {
+	float: right;
+	width: 480px;
+	padding: 30px;
+	color: #c55;
+}
+
+#photo {
+	width: 260px;
+	height: 220px;
+	position: relative;
+}
+
+img[alt="photo"] {
+	position: absolute;
+	left: 20px;
+	bottom: 0;
+	margin: 5px;
+}
+
+#information {
+	margin-top: 20px;
+	padding: 20px 0;
+	height: 240px;
+}
+
+#information p{
+	margin: 20px;
+	/*padding: 5px 0;*/
+}
+
+#skill {
+	margin: 20px;
+	/*padding: 10px 0;*/
+	height: 260px;
+}
+
+#skill p {
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+}
+
+#hobby {
+	margin: 80px 20px 20px;
+	/*padding: 10px 0;*/
+	height: 280px;
+}
+
+.familiar {
+	width: 200px;
+	height: 15px;
+	line-height: 15px;
+	/*overflow: hidden;*/
+	border: 1px solid #fff;
+	display: flex;
+}
+
+.familiar div{
+	/*float: left;*/
+	height: 15px;
+	width: 100px;
+	background: #ccc;
+	margin-right: 10px;
+}
+
+.known {
+	width: 200px;
+	height: 15px;
+	line-height: 15px;
+	overflow: hidden;
+	border: 1px solid #fff;
+}
+
+.known div{
+	float: left;
+	height: 15px;
+	width: 50px;
+	background: #ccc;
+	margin-right: 10px;
+}
+
+#name {
+	height: 160px;
+}
+
+#name h1 {
+	font-size: 3em;
+	margin: 0;
+}
+
+#name p {
+	font-weight: bold;
+	margin: 0;
+}
+
+#right h2 {
+	margin: 0;
+	width: 430px;
+	margin-left: 10px;
+	border-bottom: 1px #c55 solid;
+	height: 36px;
+	line-height: 36px;
+}
+
+#right>section>div {
+	display: flex;
+	/*vertical-align: middle;*/
+}
+
+#right>section>div>div {
+	background: #c55;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	position: relative;
+}
+
+#right img {
+	position: absolute;
+	left: 4px;
+	top: 4px;
+}
+
+#education {
+	height: 200px;
+}
+
+#work {
+	height: 400px;
+}
+
+#award {
+	height: 200px;
+}
+
+#self {
+	height: 180px;
+}
