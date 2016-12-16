@@ -156,12 +156,14 @@ header li:hover, .current {
 	position: relative;
 	top: 134px;
 	left: 710px;
+	width: 446px;
 }
 
 #dl-container {
 	position: relative;
 	top: 197px;
 	left: 712px;
+	width: 480px;
 }
 
 #dl-container a {
