@@ -134,3 +134,36 @@
 .tag {
 	margin-top: 10px;
 }
+
+.practice_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.practice_item {
+	box-sizing: border-box;
+	width: 24%;
+	/*height: px;*/
+	margin: 20px;
+	padding: 20px;
+	background-color: #fff;
+}
+
+.practice_item > a {
+	display: block;
+}
+
+.practice_item img {
+	width: 92%;
+	border: 1px solid #999;
+}
+
+.practice_item  h2 {
+	font-size: 1rem;
+	color: #12a6db;
+	margin-top: 10px;
+}
+
+.practice_item  h2:hover {
+	color: #999;
+}
