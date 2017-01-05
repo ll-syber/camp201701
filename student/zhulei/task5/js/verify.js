@@ -2,7 +2,7 @@ window.onload = function  () {
 	var btn = document.getElementById('check_btn');
 
 	btn.onclick = function  () {
-		var card = document.getElementById('card');
+		var card = document.getElementById('input');
 		var card_id = card.value;
 		// alert(card_id);
 		if (card_id.length > 0 && (card_id.indexOf(" ") == -1)) {
