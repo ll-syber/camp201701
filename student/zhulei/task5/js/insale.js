@@ -21,7 +21,7 @@ window.onload = function () {
 		if (currentDay.getDay() === 3) {
 			var obj = {};
 			obj.date = currentDay.toLocaleDateString();
-			obj.daysBefore = dayTowed(today, currentDay);
+			obj.daysBefore = dayToWed(today, currentDay);
 			saleDayList[j] = obj;
 			j++;
 			// obj = null;
@@ -41,7 +41,7 @@ window.onload = function () {
 	}
 };
 
-function dayTowed (today, wednesday) {
+function dayToWed (today, wednesday) {
 	var msPerDay = 24 * 60 * 60 * 1000;
 	var daysLeft = (wednesday.getTime() - today.getTime()) / msPerDay;
 	daysLeft = Math.ceil(daysLeft);
