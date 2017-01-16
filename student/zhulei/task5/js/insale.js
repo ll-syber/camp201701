@@ -8,7 +8,7 @@ window.onload = function () {
 
 	// alert(endDay);
 	var countStart = (startDay.getTime() - today.getTime() > 0) ? startDay : today;
-	console.log(startDay.toLocaleString());
+	// console.log(startDay.toLocaleString());
 
 	if (countStart.getTime() - endDay.getTime() > 0) {
 		// alert(typeof(countStart.getTime() - endDay.getTime()));
