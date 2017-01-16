@@ -1,19 +1,23 @@
 window.onload = function () {
 	var today = new Date();
-	var startDay = new Date('2017, 2, 1');
-	var endDay = new Date('2017, 2, 28');
+	// var startDay = new Date('2017, 2, 1');
+	var startDay = new Date(2017, 1, 1);
+	var endDay = new Date(2017, 1, 28);
 	var saleDayList = [];
 	var j = 0;
 
 	// alert(endDay);
 	var countStart = (startDay.getTime() - today.getTime() > 0) ? startDay : today;
+	console.log(startDay.toLocaleString());
 
 	if (countStart.getTime() - endDay.getTime() > 0) {
 		// alert(typeof(countStart.getTime() - endDay.getTime()));
 		return;
 	}
+
 	for (var i = countStart.getDate(); i <= endDay.getDate(); i++) {
-		var currentStr = '2017, 2, ' + i;
+		// var currentStr = '2017, 2, ' + i;
+		var currentStr = [2017, 2, i];
 		// console.log(currentStr);
 		var currentDay = new Date(currentStr);
 
