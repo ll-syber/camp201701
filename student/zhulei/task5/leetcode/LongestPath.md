@@ -5,12 +5,12 @@
 
 ## 题目说明
 给一个表示路径的字符串，如`"dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"`，表示目录结构：
-<pre>
-dir
-    subdir1
-    subdir2
-       	file.ext
-</pre>
+
+	dir
+	    subdir1
+	    subdir2
+	       	file.ext
+
 求出最长文件路径的字符串长度，如最长路劲为`"dir/subdir2/file.ext"`，长度为20.   
 本题有两个注意点：   
 - 最后一个必须为文件，文件中有`'.'`字符   
@@ -24,7 +24,7 @@ dir
 把输入的字符串按`\n`进行分割，然后`\t`数量比栈顶元素多的入站，否则弹栈；栈顶元素为文件，则统计站内的字符串长度。
 
 ###版本一
-<pre>
+
 	var lengthLongestPath = function(input) {
 		var maxLength = 0;
 		var curentLength = 0;
@@ -53,7 +53,7 @@ dir
 
 		return maxLength;
 	};
-</pre>
+
 
 写的比较臭，运行时间打败了29%的人。   
 之后去DISCUSS里看了别人的解法，大部分与我的思路一致，只是别人的代码看上去更加优雅。   
