@@ -11,6 +11,7 @@
 
 ## 解法一
 对面积开平方并取大于等于结果的整数，若面积除以这个数得整数，则为结果，否则该数加一直至与面积相等
+
 	var constructRectangle = function(area) {
 	    // var arr = [];
 	    var sqt = Math.ceil(Math.sqrt(area));
