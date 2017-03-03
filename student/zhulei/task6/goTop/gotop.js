@@ -23,12 +23,12 @@ window.onload = function () {
         duration = 500;
         currentY = window.scrollY;
     
-    requestAnimationFrame(function update(){
+    requestAnimationFrame(function move(){
       let currentTime = Date.now();
       let p = (currentTime - startTime) / duration;
       window.scrollTo(0, currentY * (1 - p));
       if(window.scrollY){
-        requestAnimationFrame(update);
+        requestAnimationFrame(move);
       }
     });
   }
