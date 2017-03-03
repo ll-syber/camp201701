@@ -1,0 +1,42 @@
+html{
+  font-size: 20px;
+}
+
+input,button{
+  font-size: 20px;
+}
+
+ul{
+  list-style-type:none;
+}
+
+ul>li:hover{
+  background: black;
+  color: white;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.add {
+  animation: fadeIn 1s linear;
+}
+
+.delete {
+  animation: fadeOut 1s linear;  
+}
