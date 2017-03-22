@@ -8,7 +8,7 @@ window.onload = function () {
     
     this.button.onclick = function(){
       // window.scrollTo(0, 0);
-      goTopAnimation();
+      goTopAnimation(500);
     }
     
     window.onscroll = function(evt){
@@ -18,9 +18,9 @@ window.onload = function () {
     this.update();
   }
 
-  function goTopAnimation(el){
+  function goTopAnimation(duration){
     let startTime = Date.now(),
-        duration = 500;
+        // duration = 500;
         currentY = window.scrollY;
     
     requestAnimationFrame(function move(){
