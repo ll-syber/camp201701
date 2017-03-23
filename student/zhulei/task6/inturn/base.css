@@ -25,7 +25,7 @@ ul, li {
 	opacity: 0;
 	overflow: hidden;
 }
-.slide-list__item--select {
+.slide-list__item--selected {
 	/*position: absolute;*/
 	transition: opacity 1.1s;
 	opacity: 1;
@@ -40,9 +40,8 @@ ul, li {
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.3);
 	border-radius: 20px;
-	opacity: 0.5;
 }
 .controler li {
 	width: 10px;
@@ -51,6 +50,6 @@ ul, li {
 	border-radius: 50%;
 	background-color: #fff;
 }
-.controler li:hover {
+.controler li.controler-item--selected {
 	background-color: #f00;
 }
