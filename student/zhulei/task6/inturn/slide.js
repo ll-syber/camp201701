@@ -13,6 +13,7 @@ window.onload = function () {
 		this.selectCls = selectCls;
 		this.interval = interval;
 		this.rvs = false;
+		this.timer;
 	}
 	Slider.prototype.gItm = function(){
 		console.log(this.items.length);
@@ -55,11 +56,14 @@ window.onload = function () {
 		let nextIndex = (slctIndex + this.items.length - 1) % this.items.length;
 		this.slideTo(nextIndex);
 	};
+	Slider.prototype.stop = function(){
+		clearTimeout(timer);
+	};	
 	Slider.prototype.start = function(){
 		if(!this.rvs) {
-			setInterval(() => this.next(), this.interval);
+			timer = setInterval(() => this.next(), this.interval);
 		} else {
-			setInterval(() => this.previous(), this.interval);
+			timer = setInterval(() => this.previous(), this.interval);
 		}
 	};
 
@@ -106,19 +110,28 @@ window.onload = function () {
 		});
 	};
 
-	//单向绑定
+	//双向绑定
 	function bindComponent(controler, slider, evtType) {
+		let timer;
+
+		timer = setInterval(() => {
+			controler.slideTo(slider.getSelectedItemIndex());
+		}, slider.interval);	
+			
 		controler.controler.addEventListener(evtType, evt => {
 			if (evt.target && evt.target.nodeName == 'LI') {
 				console.log(evt.target.getAttribute('index') - 0);
 				// this.targetObj.slideTo(evt.target.getAttribute('index') - 0);
+				slider.stop();
+				clearTimeout(timer);
 				slider.slideTo(evt.target.getAttribute('index') - 0);
 				controler.slideTo(evt.target.getAttribute('index') - 0);
+				slider.start();
+				timer = setInterval(() => {
+					controler.slideTo(slider.getSelectedItemIndex());
+				}, slider.interval);
 			}
 		});
-		setInterval(() => {
-			controler.slideTo(slider.getSelectedItemIndex());
-		}, slider.interval);
 		// controler.slideTo(slider.getSelectedItemIndex());
 		// slider.slideTo(controler.getSelectedItemIndex());
 	}
