@@ -122,14 +122,14 @@ window.onload = function () {
 			if (evt.target && evt.target.nodeName == 'LI') {
 				console.log(evt.target.getAttribute('index') - 0);
 				// this.targetObj.slideTo(evt.target.getAttribute('index') - 0);
-				slider.stop();
-				clearTimeout(timer);
+				// slider.stop();
+				// clearTimeout(timer);
 				slider.slideTo(evt.target.getAttribute('index') - 0);
 				controler.slideTo(evt.target.getAttribute('index') - 0);
-				slider.start();
-				timer = setInterval(() => {
-					controler.slideTo(slider.getSelectedItemIndex());
-				}, slider.interval);
+				// slider.start();
+				// timer = setInterval(() => {
+				// 	controler.slideTo(slider.getSelectedItemIndex());
+				// }, slider.interval);
 			}
 		});
 		// controler.slideTo(slider.getSelectedItemIndex());
